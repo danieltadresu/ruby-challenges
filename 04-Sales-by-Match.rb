@@ -1,4 +1,5 @@
-ar = [1, 2, 1, 2, 1, 3, 2]
+ar = [1, 1, 2, 2, 3, 4, 3]
+
 n = ar.length()
 #for value in [1, 2, 1, 2, 1, 3, 2] do
 #  puts value
@@ -13,15 +14,14 @@ def sockMerchant(n, ar)
     count += 1
     for i in ar[count, n] do
       if aux == i
+        ar.delete(ar[i])
+        print ar
         equals += 1
-
         break
       end
-      puts i
     end
-
   end
-  puts 'Equals value' +
+  puts equals
 end
 
 sockMerchant(n, ar)
